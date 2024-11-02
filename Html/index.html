@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <!-- Tailwind CSS via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold text-center mb-6">To-Do List</h1>
+
+    <!-- Add Task Form -->
+    <div class="bg-white p-4 rounded shadow-md mb-6">
+      <h2 class="text-xl mb-4">Add New Task</h2>
+      <form id="taskForm" class="space-y-4">
+        <div>
+          <label for="taskName" class="block font-semibold">Task Name:</label>
+          <input type="text" id="taskName" class="w-full p-2 border border-gray-300 rounded" required />
+        </div>
+        <div>
+          <label for="taskDesc" class="block font-semibold">Description:</label>
+          <textarea id="taskDesc" class="w-full p-2 border border-gray-300 rounded" required></textarea>
+        </div>
+        <div>
+          <label for="dueDate" class="block font-semibold">Due Date:</label>
+          <input type="date" id="dueDate" class="w-full p-2 border border-gray-300 rounded" required />
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Add Task
+        </button>
+      </form>
+    </div>
+
+    <!-- Sorting Options -->
+    <div class="bg-white p-4 rounded shadow-md mb-6">
+      <label for="sortOrder" class="block font-semibold mb-2">Sort By Due Date:</label>
+      <select id="sortOrder" class="w-full p-2 border border-gray-300 rounded">
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
+
+    <!-- Task List -->
+    <div class="bg-white p-4 rounded shadow-md">
+      <h2 class="text-xl mb-4">Your Tasks</h2>
+      <ul id="taskList" class="space-y-4">
+        <!-- Tasks will be added here dynamically -->
+      </ul>
+    </div>
+  </div>
+  <script src="/JavaScript/app.js"></script>
+ 
+</body>
+</html>
